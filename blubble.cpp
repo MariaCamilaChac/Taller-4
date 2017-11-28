@@ -1,18 +1,8 @@
 
 #include <iostream>
-
-
-
-
 #include <conio.h>
-
-
-
-
-
-
-using namespace std;
-
+// bring the libray
+using namespace std; 
 
 int main()
 
@@ -26,22 +16,12 @@ int main()
    int i, j , temp;
 
 
-
-
-
-
    cout<<" Ingrese los numeros a ordenar "<<endl;
 
-
    {
-
-
        for(i=0;i<5;i++)
 
-
        {
-
-
            cout<<i+1<<" -> ";
 
 
@@ -49,35 +29,22 @@ int main()
 
 
            cout<<endl;
-
-
        }
-
 
    }
 
-
-
-
-
-
    for(i=0;i<5;i++)
 
-
    {
-
-
        for(j=i+1;j<5;j++)
 
 
        {
-
-
+          
            if(vector[j]<vector[i])
 
 
            {
-
 
                temp=vector[j];
 
@@ -105,9 +72,7 @@ int main()
 
    {
 
-
        cout<<vector[i]<<" ";
-
 
    }
 
