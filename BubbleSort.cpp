@@ -11,10 +11,10 @@ using namespace std;
  * Date:27/11/2017
  */
 
-void BubbleSort (int array[], int T){
+void BubbleSort (int array[], int T){ // create the method
 	int pasada;
    
-        int interruptor = 1, aux;
+        int interruptor = 1, aux; // create the variables
         for (pasada = 0; pasada < T - 1 && interruptor == 1 ; pasada++) {
             interruptor = 0;
             for (int j = 0; j < T - pasada -1; j++) {
@@ -30,7 +30,7 @@ void BubbleSort (int array[], int T){
         }
     }
 
-void ImprimirArray (int array[],int T){
+void ImprimirArray (int array[],int T){  // create the method for print the array
   	
   	for(int i = 0 ; i < T ; i++){
  	
@@ -48,28 +48,29 @@ int main()
 {
 	
 	string str;
-    vector<int> vect;
+    vector<int> vect; // bring the vector library 
 	
 	int T=0;
 	
-	cout << "ingrese el tamaño del arreglo "<< endl;
+	cout << "ingrese el tamaÃ±o del arreglo "<< endl; // ask the length of array
 	cin >> T;
 	
-	int  B [T];
+	int  B [T]; // create the principal array
 	cout << "Ingrese los numeros del arreglo, recuerde que debe ir separado por comas " << endl ;
 	 cin >> str;
-    stringstream ss(str);
+    stringstream ss(str); // this library allows any type of data, even if they are mixed
     int i;
 	
  while (ss >> i){
-        vect.push_back(i);
-        if (ss.peek() == ',')
-            ss.ignore();
+        vect.push_back(i); //Value to be copied (or moved) to the new element.
+        if (ss.peek() == ',') //Returns the next character in the input sequence, without extracting it
+            ss.ignore(); //Extracts characters from the input sequence and discards them
     }
     for (i=0; i< vect.size(); i++){
-    	B[i] = vect.at(i);
+    	B[i] = vect.at(i); // assign the new chay in array without comas
 	}
 	
+	// call the methods
 	ImprimirArray(B,T);
 	cout << endl;
 	BubbleSort(B,T);
