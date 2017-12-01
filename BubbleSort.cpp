@@ -11,7 +11,7 @@ using namespace std;
  * Date:27/11/2017
  */
 
-void BubbleSort (int array[], int T){ // create the method
+void BubbleSort (int array[], int T){ // create the ordering method
 	int pasada;
    
         int interruptor = 1, aux; // create the variables
