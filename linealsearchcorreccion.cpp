@@ -4,8 +4,8 @@
 #include <iostream>
 /*
 *
-* Estructura de Datos- punto 3
-*	@author :Camila chacón
+* Estructura de Datos- lineal search
+*	@author :Camila chacÃ³n
 *	@date 28-11-2017
 *	@version 3
 *
@@ -14,17 +14,17 @@
  
  using namespace std;
  
- int linearSearch(int array[],int tam, int valor){
+ int linealSearch(int array[],int tam, int valor){ // create the order method
  	for(int i = 0 ; i < tam ; i++){
  		if(valor == array [i]){
 		 return i ;
 		 }
 	 }
-	return -1;
+	return -1; // if the conditional is false return -1
  }
  
  
-  int arreglo(int array[], int tam){
+  int arreglo(int array[], int tam){ // create the method for print the array
   	
   	for(int i = 0 ; i < tam ; i++){
  	
@@ -40,31 +40,33 @@
  	int y;
  	
  	string str;
-    vector<int> vect;
+    vector<int> vect; // bring the libray vector
     
-    cout <<"ingrese el tamaño del arreglo: " << endl;
+    cout <<"ingrese el tamaÃ±o del arreglo: " << endl; // ask the length of array
  	cin >> x;
-    int a[x];
-    cout << "Digite los números: \n";
+    int a[x]; // create de principal array
+    cout << "Digite los nÃºmeros: \n";
     cin >> str;
-    stringstream ss(str);
+    stringstream ss(str); 
     int i;
     
     while (ss >> i){
-        vect.push_back(i);
-        if (ss.peek() == ',')
-            ss.ignore();
+        vect.push_back(i); // //Value to be copied (or moved) to the new element.
+        if (ss.peek() == ',') // Returns the next character in the input sequence, without extracting it
+            ss.ignore(); //Extracts characters from the input sequence and discards them
     }
     for (i=0; i< vect.size(); i++){
-    	a[i] = vect.at(i);
+    	a[i] = vect.at(i); // assign the new chay in array without comas
 	}
         
  	
  	
  	cout <<"ingrese numero que desea buscar: " << endl;
  	cin >> y;
+	 
+	 // call the functions 
 
-	int result = linearSearch(a,x,y);
+	int result = linealSearch(a,x,y);
 		
 	arreglo(a,x);
 	
